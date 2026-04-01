@@ -1,0 +1,17 @@
+name: email-triage-env
+description: Customer support email classification and response environment
+
+entry_point: env.environment:EmailEnv
+
+observation_space:
+  email_text: string
+  step_count: int
+
+action_space:
+  intent: string
+  priority: string
+  response: string
+
+reward:
+  type: float
+  range: [0.0, 1.0]
